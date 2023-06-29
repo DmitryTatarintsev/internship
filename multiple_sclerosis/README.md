@@ -1,9 +1,9 @@
-![](https://github.com/salfa-ru/doct24_neural-network/blob/main/multiple_sclerosis/Dmitry/img/c6e5c47311949440d1fee4d8c6df71bf.jpg)
+![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/img/c6e5c47311949440d1fee4d8c6df71bf.jpg)
 
 # Предсказание рассеянного склероза
-<a href='https://github.com/salfa-ru/doct24_neural-network/blob/main/multiple_sclerosis/Dmitry/make_datasets.ipynb'> Подготовка данных </a> </br>
-<a href='https://github.com/salfa-ru/doct24_neural-network/blob/main/multiple_sclerosis/Dmitry/main.ipynb'> Прогностическая модель </a> </br>
-<a href='https://github.com/salfa-ru/doct24_neural-network/blob/main/multiple_sclerosis/Dmitry/requirements.txt'> requirements.txt </a> </br>
+<a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/make_datasets.ipynb'> Подготовка данных </a> </br>
+<a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/main.ipynb'> Прогностическая модель </a> </br>
+<a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/requirements.txt'> requirements.txt </a> </br>
 
 make_datasets.ipynb - подготовка данных.</br>
 main.ipynb - проект, процесс исследования и обучения модели.</br>
@@ -153,7 +153,8 @@ Found 41493 files belonging to 2 classes.
 Using 8298 files for validation.
 Found 10374 files belonging to 2 classes.
 ```
-![](https://github.com/salfa-ru/doct24_neural-network/blob/main/multiple_sclerosis/Dmitry/img/subplot.png)
+
+![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/img/subplot.png)
 
 ### Прогностическая модель
 ```
@@ -190,9 +191,9 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
-![](https://github.com/salfa-ru/doct24_neural-network/blob/main/multiple_sclerosis/Dmitry/img/acc_loss.png)
+![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/img/acc_loss.png)
 
-![](https://github.com/salfa-ru/doct24_neural-network/blob/main/multiple_sclerosis/Dmitry/img/cm.png)
+![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/img/cm.png)
 
 ### Программа. Алгоритм предобработки и прогноза
 Программа принимает путь к рентгеновскому снимку (jpg, dicom) и возвращает вероятность (от 0 до 1) рассеянного склероза.
