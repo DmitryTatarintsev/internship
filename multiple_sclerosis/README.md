@@ -154,7 +154,7 @@ Using 8298 files for validation.
 Found 10374 files belonging to 2 classes.
 ```
 
-![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/img/subplot.png)
+![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/img/subplot.png)
 
 ### Прогностическая модель
 ```
@@ -191,9 +191,9 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
-![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/img/acc_loss.png)
+![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/img/acc_loss.png)
 
-![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/img/cm.png)
+![](https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/img/cm.png)
 
 ### Программа. Алгоритм предобработки и прогноза
 Программа принимает путь к рентгеновскому снимку (jpg, dicom) и возвращает вероятность (от 0 до 1) рассеянного склероза.
