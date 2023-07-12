@@ -158,35 +158,36 @@ Found 10374 files belonging to 2 classes.
 
 ### Прогностическая модель
 ```
+Model: "sequential"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
  conv2d (Conv2D)             (None, 510, 510, 32)      320       
                                                                  
- max_pooling2d (MaxPooling2D  (None, 102, 102, 32)     0         
+ max_pooling2d (MaxPooling2D  (None, 170, 170, 32)     0         
  )                                                               
                                                                  
- conv2d_1 (Conv2D)           (None, 100, 100, 64)      18496     
+ conv2d_1 (Conv2D)           (None, 168, 168, 64)      18496     
                                                                  
- max_pooling2d_1 (MaxPooling  (None, 20, 20, 64)       0         
+ max_pooling2d_1 (MaxPooling  (None, 56, 56, 64)       0         
  2D)                                                             
                                                                  
- conv2d_2 (Conv2D)           (None, 18, 18, 128)       73856     
+ conv2d_2 (Conv2D)           (None, 54, 54, 128)       73856     
                                                                  
- max_pooling2d_2 (MaxPooling  (None, 3, 3, 128)        0         
+ max_pooling2d_2 (MaxPooling  (None, 18, 18, 128)      0         
  2D)                                                             
                                                                  
- flatten (Flatten)           (None, 1152)              0         
+ flatten (Flatten)           (None, 41472)             0         
                                                                  
- dense (Dense)               (None, 128)               147584    
+ dense (Dense)               (None, 128)               5308544   
                                                                  
  dropout (Dropout)           (None, 128)               0         
                                                                  
  dense_1 (Dense)             (None, 2)                 258       
                                                                  
 =================================================================
-Total params: 240,514
-Trainable params: 240,514
+Total params: 5,401,474
+Trainable params: 5,401,474
 Non-trainable params: 0
 _________________________________________________________________
 ```
