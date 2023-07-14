@@ -2,7 +2,8 @@
 
 # Предсказание рассеянного склероза
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/make_datasets.ipynb'> Подготовка данных </a> </br>
-<a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/main.ipynb'> Прогностическая модель </a> </br>
+<a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/main.ipynb'> Прогностическая модель. Тетрадь </a> </br>
+<a href='https://drive.google.com/drive/folders/11SlJz5nOSe3CkvWub766jLOe6hc9gBX_'> Прогностическая модель. Итоговый файл модели .h5 с алгоритмом предобработки .ру </a> </br>
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/Dmitry/requirements.txt'> requirements.txt </a> </br>
 
 make_datasets.ipynb - подготовка данных.</br>
