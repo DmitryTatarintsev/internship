@@ -266,7 +266,7 @@ with open('model.py', 'w+', encoding="utf-8",) as f:
 
 ```python
 import model
-model.predict_proba("1.2.643.5.1.13.13.12.2.77.8252.00110314000013010811031306040509.dcm")
+model.predict_proba(""example/image_example.dcm")
 ```
 ```
 1/1 [==============================] - 0s 120ms/step
@@ -275,7 +275,7 @@ model.predict_proba("1.2.643.5.1.13.13.12.2.77.8252.0011031400001301081103130604
 
 ```python
 import model
-model.predict_proba("for_image/test/0/1.2.643.5.1.13.13.12.2.77.8252.00000102100510131211110011090714.jpg")
+model.predict_proba(""example/image_example_1.jpg")
 ```
 ```
 1/1 [==============================] - 0s 68ms/step
