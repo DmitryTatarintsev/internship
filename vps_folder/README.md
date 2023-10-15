@@ -1,6 +1,6 @@
 ![](https://github.com/salfa-ru/doct24_neural-network/blob/main/PatientsExcelData/Dmitry/png/cdn_alltend_ru_pic.jpg)
 
-# Предсказание врожденного порога сердца у детей
+# Предсказание врожденного порока сердца у детей
 
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/main.ipynb'> Прогностическая модель </a> </br>
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/Notebook.ipynb'> Применение </a> </br>
@@ -16,7 +16,7 @@ tokenizer.pickle - частный словарь.
 
 Статус: **проект завершен.**
 
-Цель: написать прогностическую модель для определения вероятности врожденного порога сердца у детей. Где 0 - нет порога сердца, 1 - есть порог сердца.
+Цель: написать прогностическую модель для определения вероятности врожденного порока сердца у детей. Где 0 - нет порока сердца, 1 - есть порок сердца.
 
 </br>Частота заполнения данных о пациенте.</br>
 ![](https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/png/df_null.png)
@@ -29,8 +29,8 @@ tokenizer.pickle - частный словарь.
 ![](https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/png/train_result.png)
 ![](https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/png/embedding_model.png)
 </br> Верно опредленно: </br>
-99% -  отсутствие порога сердца </br>
-89% - порог сердца</br>
+99% -  отсутствие порока сердца </br>
+89% - порок сердца</br>
 </br>
 Итоговая точность прогноза модели: 94%
 
