@@ -3,8 +3,8 @@
 # Предсказание врожденного порока сердца у детей
 
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/main.ipynb'> Итоговая модель. Deep Learning. Нейронная прогностическая модель.  </a> </br>
-<a href='https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/heart_disease_classicML_model.ipynb'> Data Science. Классическое машинное обучение. Прогностическая модель </a> </br>
-<a href='https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/Notebook.ipynb'> Применение </a> </br>
+<a href='https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/heart_disease_classicML_model.ipynb'> Data Science. Классическое машинное обучение. Прогностическая модель. </a> </br>
+<a href='https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/Notebook.ipynb'> Применение. </a> </br>
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/requirements.txt'> requirements.txt </a></br>
 
 main.ipynb - проект, процесс исследования и обучения модели.</br>
