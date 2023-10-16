@@ -136,3 +136,7 @@ score()
 ```
 
 ![](https://github.com/DmitryTatarintsev/internship/blob/main/AlfaBankCampus/submission.png)
+
+# Итог соревнования
+
+![](https://github.com/DmitryTatarintsev/internship/blob/main/AlfaBankCampus/kaggle_result.png)
