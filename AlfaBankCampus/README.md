@@ -3,8 +3,8 @@
 Тестовое задание: <a href='https://www.kaggle.com/competitions/alfabank-campus/overview'> alfabank-campus/overview </a> </br>
 
 # Регрессионная модель временного ряда. Прогностическая модель AlfaBank Campus.
-<a href='https://drive.google.com/file/d/1mg57JFFxk4CxFKScDmcQjw9J24lFkryz/view?usp=sharing'> Прогностическая модель. Data Science </a> </br>
-<a href='https://drive.google.com/file/d/1RStwa5GgUjuH7uZhEHeUgskp-2z4VNQT/view?usp=sharing'> Прогностическая модель. Deep Learning </a> </br>
+<a href='https://drive.google.com/file/d/1mg57JFFxk4CxFKScDmcQjw9J24lFkryz/view?usp=sharing'> Классическая прогностическая модель. Data Science </a> </br>
+<a href='https://drive.google.com/file/d/1RStwa5GgUjuH7uZhEHeUgskp-2z4VNQT/view?usp=sharing'> Нейронная прогностическая модель. Deep Learning </a> </br>
 <a href='https://drive.google.com/file/d/1jnWmYqSfGZHiNiAfVDwyPQNH8Z_wEbr4/view?usp=sharing'> Итог. Submission </a> </br>
 
 <a href='https://drive.google.com/file/d/1-8YpGrM3K62n4lYwnFLH9BVuGw4c9lr-/view?usp=sharing'> requirements. </a> </br>
