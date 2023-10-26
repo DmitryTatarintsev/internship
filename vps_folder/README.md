@@ -27,6 +27,36 @@ tokenizer.pickle - частный словарь.
 ![](https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/png/all1.png)
 
 В итоге, выбрали и обучили модель нейронной сети только на признаке Diagnosis
+```
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 400, 50)           1500000   
+                                                                 
+ spatial_dropout1d (SpatialD  (None, 400, 50)          0         
+ ropout1D)                                                       
+                                                                 
+ flatten (Flatten)           (None, 20000)             0         
+                                                                 
+ batch_normalization (BatchN  (None, 20000)            80000     
+ ormalization)                                                   
+                                                                 
+ dense_4 (Dense)             (None, 64)                1280064   
+                                                                 
+ dropout_3 (Dropout)         (None, 64)                0         
+                                                                 
+ batch_normalization_1 (Batc  (None, 64)               256       
+ hNormalization)                                                 
+                                                                 
+ dense_5 (Dense)             (None, 2)                 130       
+                                                                 
+=================================================================
+Total params: 2,860,450
+Trainable params: 2,820,322
+Non-trainable params: 40,128
+_________________________________________________________________
+```
 ![](https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/png/train_result.png)
 ![](https://github.com/DmitryTatarintsev/internship/blob/main/vps_folder/png/embedding_model.png)
 </br> Верно опредленно: </br>
