@@ -42,8 +42,8 @@ def main():
     st.title("Прогноз вероятности рассеянного склероза на снимке МРТ.")
     uploaded_file = st.file_uploader("Выберите изображение", type=["dcm", "jpg", "png"])
     if uploaded_file is not None:
-        if uploaded_file.name.endswith('.dcm'): img_array = read_dcm(uploaded_file.name)
-        else: img_array = read_img(uploaded_file.name)     
+        if uploaded_file.name.endswith('.dcm'): img_array = read_dcm(uploaded_file)
+        else: img_array = read_img(uploaded_file)     
         # Отображение выбранного изображения
         st.image(img(img_array), caption='Выбранное изображение', use_column_width=True)
         # Предсказание вероятности с помощью модели
