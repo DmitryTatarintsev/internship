@@ -4,6 +4,7 @@
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/make_datasets.ipynb'> Подготовка данных </a> </br>
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/all_experiments.ipynb'> Разные эксперименты. Тетрадь </a> </br>
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/main.ipynb'> Прогностическая модель. Тетрадь </a> </br>
+<a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/app.py'> Алгоритм веб-приложения. </a> </br>
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/model.h5'> Итоговый h5 файл модели. </a> </br>
 <a href='https://github.com/DmitryTatarintsev/internship/blob/main/multiple_sclerosis/requirements.txt'> requirements.txt </a> </br>
 
