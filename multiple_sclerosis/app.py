@@ -40,7 +40,28 @@ img = lambda x: Image.fromarray(x.numpy().astype(np.uint8).reshape(512, 512))
 
 def main():
     st.title("Прогноз вероятности рассеянного склероза на снимке МРТ.")
+
+    # Display instruction text
+    st.markdown("##### Инструкция:")
+    st.write("1. Загрузите свое изображение, используя кнопку 'Upload an image'.")
+    st.write("2. Либо выберите одно из предварительно загруженных изображений ниже.")
+    st.write("3. После загрузки изображения результаты обработки отобразятся ниже.")
+    st.write("")
+    
     uploaded_file = st.file_uploader("Выберите изображение", type=["dcm", "jpg", "png"])
+
+    if uploaded_file is None:
+        # Display a row of preloaded images
+        st.markdown("##### Preloaded Images")
+        col1, col2 = st.columns(2)  # Create 2 columns for 2 images
+        with col1:
+            image1 = img(read_img("image_example_1.jpg"))
+            st.image(image1, caption='jpg example', use_column_width=True)
+    
+        with col2:
+            image2 = img(read_dcm("image_example.dcm"))
+            st.image(image2, caption='dcm example', use_column_width=True)
+
     if uploaded_file is not None:
         if uploaded_file.name.endswith('.dcm'): img_array = read_dcm(uploaded_file)
         else: img_array = read_img(uploaded_file)     
@@ -51,6 +72,10 @@ def main():
         predictions = tf.nn.softmax(predictions[0])
         predictions =  round(float(predictions[1]), 2)
         st.write(f"Вероятность: {predictions}")
+
+    st.write("")
+    st.write("Автор: https://t.me/dtatarintsev")
+    st.write("GitHub проекта: https://github.com/DmitryTatarintsev/internship/tree/main/multiple_sclerosis")
 
 if __name__ == "__main__":
     main()
