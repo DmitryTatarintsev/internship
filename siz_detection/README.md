@@ -36,31 +36,31 @@
 
 - *Парсинг.*
 
-- - [`create_frames.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/create_frames.ipynb): генерация изображений размером 1280x1280 на основе идентификаторов аннотаций и кадров размеченного видео. Разбивается на выборки. Запускается индивидуально для каждого видео. Затем папки train-val-test вручную переносятся в общий каталог.
-- - [`data.yaml`](https://github.com/NeuronsUII/Zavod_Ural_n/blob/main/dtatarintsev/data.yaml): файл конфигурации обучения Yolo 9. Содержит информацию по классам и массиву данных в целом.
-- - [`sample_size_reduction.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/sample_size_reduction.ipynb): алгоритм сжатия массива данных по числу и размеру снимков. Запускается после `create_frames.ipynb` и объединения.
-- - [`Augmentations.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Augmentations.ipynb): алгоритм аугментации тренировочных данных. Запускается после `sample_size_reduction.ipynb`.
-- - [`requirements.txt`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/requirements.txt): актуальные версии библиотек.
+- - [`create_frames.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/create_frames.ipynb): генерация изображений размером 1280x1280 на основе идентификаторов аннотаций и кадров размеченного видео. Разбивается на выборки. Запускается индивидуально для каждого видео. Затем папки train-val-test вручную переносятся в общий каталог.
+- - [`data.yaml`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/data.yaml): файл конфигурации обучения Yolo 9. Содержит информацию по классам и массиву данных в целом.
+- - [`sample_size_reduction.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/sample_size_reduction.ipynb): алгоритм сжатия массива данных по числу и размеру снимков. Запускается после `create_frames.ipynb` и объединения.
+- - [`Augmentations.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Augmentations.ipynb): алгоритм аугментации тренировочных данных. Запускается после `sample_size_reduction.ipynb`.
+- - [`requirements.txt`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/requirements.txt): актуальные версии библиотек.
 
 - *Обучение.*
 
-- - [`main_Yolo9_SIZ_.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/main_Yolo9_SIZ_.ipynb): обучени YOLOv9-C, без каскада, без черных прямоугольников на человека на наличие нарушений и правильного ношения сизов.
-- - [`best.pt`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/best.pt): веса модели.
+- - [`main_Yolo9_SIZ_.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/main_Yolo9_SIZ_.ipynb): обучени YOLOv9-C, без каскада, без черных прямоугольников на человека на наличие нарушений и правильного ношения сизов.
+- - [`best.pt`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/siz_detection/best.pt): веса модели.
 
 - *Веб-сервис.*
 
-- - [`Web_service.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Web_service.ipynb): алгоритм демо версии веб-сервиса.
-- - [`app.py`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/app.py): код модели под Streamlit app для детекции снимков.
-- - [`Dockerfile_streamlit.txt`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Dockerfile_streamlit.txt): блокнот-Dockerfile для создания образа на основе файлов этого репозитория.
+- - [`Web_service.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Web_service.ipynb): алгоритм демо версии веб-сервиса.
+- - [`app.py`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/app.py): код модели под Streamlit app для детекции снимков.
+- - [`Dockerfile_streamlit.txt`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Dockerfile_streamlit.txt): блокнот-Dockerfile для создания образа на основе файлов этого репозитория.
 
-- - [`Demoversion.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Demoversion.ipynb): приложение fast api.
-- - [`Dockerfile`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Dockerfile): Dockerfile для создания образа на основе файлов этого репозитория.
-- - [`main.py`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/main.py): код Fast API.
-- - [`detection.py`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/detection.py): код модели под Fast API для детекции видео.
+- - [`Demoversion.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Demoversion.ipynb): приложение fast api.
+- - [`Dockerfile`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Dockerfile): Dockerfile для создания образа на основе файлов этого репозитория.
+- - [`main.py`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/main.py): код Fast API.
+- - [`detection.py`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/detection.py): код модели под Fast API для детекции видео.
 
  
 ### Streamlit Детекция по снимкам (Демо версия). Веб-сервис.  Инструкция:
-В этом каталоге лежит dockerfile для активации образа приложения. Но что бы не создавать путаницы с основной рабочей версией fatsapi приложения. Этот образ просто записан в блокнот [`Dockerfile_streamlit.txt`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Dockerfile_streamlit.txt). Для создания этого образа нужно удалить другой Dockerfile этого каталога, а Dockerfile_streamlit.txt переименовать в Dockerfile.
+В этом каталоге лежит dockerfile для активации образа приложения. Но что бы не создавать путаницы с основной рабочей версией fatsapi приложения. Этот образ просто записан в блокнот [`Dockerfile_streamlit.txt`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Dockerfile_streamlit.txt). Для создания этого образа нужно удалить другой Dockerfile этого каталога, а Dockerfile_streamlit.txt переименовать в Dockerfile.
 Так же, после скачивания директори вы можете без docker активировать приложение командой в cmd Prompt:
 ```cmd Prompt
 C:\Users\...>git clone https://github.com/NeuronsUII/Zavod_Ural_n.git
@@ -117,7 +117,7 @@ C:\Users\...\Zavod_Ural_n\dtatarintsev>python -m uvicorn main:app
 ```
 
 <div>
-    <img src="https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/fastapi.png" alt="альтернативный текст" title="заголовок изображения" width="650" style="float: left; margin-right: 10px">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/fastapi.png" alt="альтернативный текст" title="заголовок изображения" width="650" style="float: left; margin-right: 10px">
 </div>
 
 **Пример запроса**
@@ -180,18 +180,18 @@ print(response.json())
 ### Качество работы модели на тестовых данных:
 
 <div style="display: flex;">
-    <img src="https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/confusion_matrix.png" alt="Image 1" style="width: 500px; height: auto;">
-    <img src="https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/confusion_matrix_normalized.png" alt="Image 2" style="width: 500px; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/confusion_matrix.png" alt="Image 1" style="width: 500px; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/confusion_matrix_normalized.png" alt="Image 2" style="width: 500px; height: auto;">
 </div>
 
 <div style="display: flex;">
-    <img src="https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/F1_curve.png" alt="Image 1" style="width: 500px; height: auto;">
-    <img src="https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/PR_curve.png" alt="Image 2" style="width: 500px; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/F1_curve.png" alt="Image 1" style="width: 500px; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/PR_curve.png" alt="Image 2" style="width: 500px; height: auto;">
 </div>
 
 <div style="display: flex;">
-    <img src="https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/P_curve.png" alt="Image 1" style="width: 500px; height: auto;">
-    <img src="https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/R_curve.png" alt="Image 2" style="width: 500px; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/P_curve.png" alt="Image 1" style="width: 500px; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/R_curve.png" alt="Image 2" style="width: 500px; height: auto;">
 </div>
 
 
@@ -223,7 +223,7 @@ print(response.json())
 *Детекция курения: [ссылка 1](https://www.kaggle.com/datasets/ahmedgamal12/smoke-detection?select=smoke), [ссылка 2](https://www.kaggle.com/datasets/sujaykapadnis/smoking).*
 
 **28.02-06.03.2024:**
-1) [Тест Yolo на стороннем массиве данных roboflow. Без сохранений.](https://github.com/NeuronsUII/Zavod_Ural_n/blob/main/dtatarintsev/testing_SIZ_yolov8_model.ipynb)  - **Выполнено.**
+1) [Тест Yolo на стороннем массиве данных roboflow. Без сохранений.](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/testing_SIZ_yolov8_model.ipynb)  - **Выполнено.**
 2) Анализ SAM и Grounding DINO - **Выполнено.**
 
 **06.03-13.03.2024:**
@@ -254,9 +254,9 @@ print(response.json())
 1) Разметка клипов в CVAT из датасета заказчика. - **Выполнено.**
 
 **10.04-17.04.2024:**
-1) Создание скриптов парсинга [`create_frames.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/create_frames.ipynb), [`sample_size_reduction.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/sample_size_reduction.ipynb), [`Augmentations.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Augmentations.ipynb) - **Выполнено.**
-2) Обучение модели. [`main_Yolo9_SIZ_.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/main_Yolo9_SIZ_.ipynb) - **Выполнено.**
-3) Создание демонстрационной версии. [Web_service.ipynb](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Web_service.ipynb) - **Выполнено.**
+1) Создание скриптов парсинга [`create_frames.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/create_frames.ipynb), [`sample_size_reduction.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/sample_size_reduction.ipynb), [`Augmentations.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Augmentations.ipynb) - **Выполнено.**
+2) Обучение модели. [`main_Yolo9_SIZ_.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/main_Yolo9_SIZ_.ipynb) - **Выполнено.**
+3) Создание демонстрационной версии. [Web_service.ipynb](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/siz_detection/Web_service.ipynb) - **Выполнено.**
 
 *Ожидаемые результаты (демонстрационная версия) -это работающая пилотная система с удобным для тестирования интерфейсом (в виде ipynb
 ноутбука с моделями и разработанным алгоритмом, пилотного консольного, десктопного
@@ -266,15 +266,15 @@ print(response.json())
 
 **17.04-01.05.2024 (Крайний срок):**
 1) Внесение финальных поправок. Сдача проекта. - **Выполнено.**
-- - [`Видео перезентация`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/zavod_ural_dtatarintsev.mp4) работы приложений. Сохранение [`Readme в pdf`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/dtatarintsev/Zavod_Ural_n_dtatarintsev.pdf)
-- - [`Web_service.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Web_service.ipynb): дополнен алгоритм демо версии веб-сервиса.
-- - [`app.py`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/app.py): дополнен код модели под Streamlit app для детекции снимков.
-- - [`Dockerfile_streamlit.txt`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Dockerfile_streamlit.txt): создан блокнот-Dockerfile для создания образа на основе файлов этого репозитория.
+- - [`Видео перезентация`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/zavod_ural_dtatarintsev.mp4) работы приложений. Сохранение [`Readme в pdf`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Zavod_Ural_n_dtatarintsev.pdf)
+- - [`Web_service.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Web_service.ipynb): дополнен алгоритм демо версии веб-сервиса.
+- - [`app.py`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/app.py): дополнен код модели под Streamlit app для детекции снимков.
+- - [`Dockerfile_streamlit.txt`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Dockerfile_streamlit.txt): создан блокнот-Dockerfile для создания образа на основе файлов этого репозитория.
 
-- - [`Demoversion.ipynb`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Demoversion.ipynb): создано приложение fast api.
-- - [`Dockerfile`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/Dockerfile): создан Dockerfile для создания образа на основе файлов этого репозитория.
-- - [`main.py`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/main.py): создан код Fast API.
-- - [`detection.py`](https://github.com/DmitryTatarintsev/internship/tree/main/siz_detection/detection.py): создан код модели под Fast API для детекции видео.
+- - [`Demoversion.ipynb`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Demoversion.ipynb): создано приложение fast api.
+- - [`Dockerfile`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/Dockerfile): создан Dockerfile для создания образа на основе файлов этого репозитория.
+- - [`main.py`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/main.py): создан код Fast API.
+- - [`detection.py`](https://github.com/DmitryTatarintsev/internship/blob/main/siz_detection/detection.py): создан код модели под Fast API для детекции видео.
 
 
 *Функциональные требования.*
