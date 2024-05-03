@@ -1,87 +1,82 @@
 import streamlit as st
-from PIL import Image
-from ultralytics import YOLO
+import os
+import numpy as np
+import pydicom                  # библиотека для работы с DICOM-изображениями в медицине.
+import tensorflow as tf         # библиотека для создания сети
 
-# Load a pretrained YOLO model
-wght = 'best.pt'
-model = YOLO(wght)
-mn = {
-    0: '',
-    1: '',
-    2: '',
-    3: '',
-    4: 'НАРУШЕНИЕ',
-    5: 'НАРУШЕНИЕ',
-    6: 'НАРУШЕНИЕ',
-    7: 'НАРУШЕНИЕ',
-    8: 'НАРУШЕНИЕ',
-    9: ''
-}
+from PIL import Image           # библиотека для работы с изображениями
+from tensorflow import keras
+from tensorflow.keras.preprocessing import image
 
-def greet(image):
-    # Run inference on an image
-    results = model(image)  # results list
-    # Visualize the results
-    for i, r in enumerate(results):
-        r.names = mn
-        # Plot results image
-        im_bgr = r.plot(line_width=3, font_size=22, labels=True, conf=True)  # BGR-order numpy array
-        im_rgb = im_bgr[..., ::-1]  # Convert BGR to RGB
-    return im_rgb
+# Модель 
+model = tf.keras.models.load_model('model.h5', compile=True)
+
+# функция для принятия на вход dcm формат        
+def read_dcm(path):
+    # Конвертируем
+    dcm = pydicom.dcmread(path)
+    img = dcm.pixel_array.astype(np.float32) # преобразование изображения в numpy-массив
+    intercept = dcm.RescaleIntercept if 'RescaleIntercept' in dcm else 0.0
+    slope = dcm.RescaleSlope if 'RescaleSlope' in dcm else 1.0
+    img = slope * img + intercept # масштабирование
+    if len(img.shape) > 2: img = img[0]
+    img -= img.min()
+    img /= img.max()
+    img *= 255.0
+    img = img.astype('uint8')
+
+    img = Image.fromarray(img).convert('L') # Преобразование в изображение в оттенках серого
+    img = img.resize((512, 512)) # Изменение размера изображения
+    img = image.img_to_array(img)
+    return tf.expand_dims(img, 0)  # добавляем дополнительное измерение (batch size)
+
+def read_img(path):
+    img = image.load_img(path, color_mode='grayscale', target_size=(512, 512))
+    img_array = image.img_to_array(img)
+    return tf.expand_dims(img_array, 0)  # добавляем дополнительное измерение (batch size)
+
+# Преобразует EagerTensor в NumPy array
+img = lambda x: Image.fromarray(x.numpy().astype(np.uint8).reshape(512, 512))
 
 def main():
-    st.markdown("### YOLOv9-c и API Streamlit 1280x1280 с весами детекции СИЗ УРАЛ ЗАВОДА для территории: склада, снаружи склада, курилка день/ночь на ближней дистанции. Детекция снимков")
-    st.write("YOLOv9-c - мощная универсальная одноэтапная модель детекции. Это самая быстрая и надежная версия YOLO от Ultralytics на 2024 год. Легко обучаема и настраиваема.")
-    st.write("Streamlit - это API пользовательского интерфейса для обработки изображений, но его также можно адаптировать для работы с видео. И/или заменить на технический (Fast API, Django, Flask) для взаимодействия между программами протоколом HTTP.")
-    st.write("")
-    st.markdown("##### Классы:")
-    st.write("- ['Каска', 'Перчатка', 'Обувь', 'Одежда', 'Рабочие']")
-    st.write("- ['Курение', 'Каска. Нарушение', 'Перчатка. Нарушение', 'Обувью Нарушение', 'Одежда. Нарушение']")
-    st.write("")
+    st.title("Прогноз вероятности рассеянного склероза на снимке МРТ.")
+    st.write("Где 0 - нет склероза, 1 - есть склероз.")
     
     # Display instruction text
     st.markdown("##### Инструкция:")
     st.write("1. Загрузите свое изображение, используя кнопку 'Upload an image'.")
-    st.write("2. После загрузки изображения результаты обработки отобразятся ниже.")
+    st.write("2. Либо выберите одно из предварительно загруженных изображений ниже.")
+    st.write("3. После загрузки изображения результаты обработки отобразятся ниже.")
     st.write("")
     
-    # Add a button to upload an image
-    uploaded_image = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader("Выберите изображение", type=["dcm", "jpg", "png"])
 
-    # Process the uploaded image if available
-    if uploaded_image is not None:
-        
-        st.write("В результате будет детектированный снимок. Все найденные объекты выделены ограничивающей рамкой (баундинг боксом). И идентифицированы опеределенным классом - цветом рамки.")
-        
-        image = Image.open(uploaded_image)
-        st.image(greet(image), caption='Processed Image', use_column_width=True)
-        
-        st.write("Отсутствие средств индивидуальной защиты или курение считается нарушением и дополнительно выделяется предупреждением 'НАРУШЕНИЕ' над прямоугльником.")
+    if uploaded_file is None:
+        # Display a row of preloaded images
+        st.markdown("##### Preloaded Images")
+        col1, col2 = st.columns(2)  # Create 2 columns for 2 images
+        with col1:
+            image1 = img(read_img("image_example_1.jpg"))
+            st.image(image1, caption='jpg example', use_column_width=True)
+    
+        with col2:
+            image2 = img(read_dcm("image_example.dcm"))
+            st.image(image2, caption='dcm example', use_column_width=True)
 
-    st.write("")
-    st.markdown("##### Рекомендации:")
-    st.write("- Размер снимка равен или более 1280x1280.")
-    st.write("- Снимок с камер УРАЛ ЗАВОДА: склада, снаружи склада, курилка день/ночь.")
-    st.write("- Чем ближе объект - тем выше шанс детекции. Если объект далеко, можно масштабировать зону поиска.")
-
-    st.write("")
-    st.write("Результаты теста на независимых данных про соблюдении рекомендациий.")
-    # Пути к изображениям
-    image1_path = 'confusion_matrix_normalized.png'
-    image2_path = 'PR_curve.png'
-    # Делаем две колонки
-    col1, col2 = st.columns(2)
-    # Отображаем изображения в каждой колонке
-    with col1:
-        st.image(image1_path, caption='Матрица ошибок', use_column_width=True)
-    with col2:
-        st.image(image2_path, caption='Соотношение точности к полноте', use_column_width=True)
+    if uploaded_file is not None:
+        if uploaded_file.name.endswith('.dcm'): img_array = read_dcm(uploaded_file)
+        else: img_array = read_img(uploaded_file)     
+        # Отображение выбранного изображения
+        st.image(img(img_array), caption='Выбранное изображение', use_column_width=True)
+        # Предсказание вероятности с помощью модели
+        predictions = model.predict(img_array)
+        predictions = tf.nn.softmax(predictions[0])
+        predictions =  round(float(predictions[1]), 2)
+        st.write(f"Вероятность: {predictions}")
 
     st.write("")
-    st.write("Но даже при соблюдении всех рекомендаций бывают исключения, когда детекция не срабатывает, а в плохих условиях работает. Моделей с 100% точностью не бывает.")
-    st.write("Спасибо за внимание!")
     st.write("Автор: https://t.me/dtatarintsev")
-    st.write("GitHub проекта: https://github.com/NeuronsUII/Zavod_Ural_n/tree/main/dtatarintsev")
-    
-if __name__ == '__main__':
+    st.write("GitHub проекта: https://github.com/DmitryTatarintsev/internship/tree/main/multiple_sclerosis")
+
+if __name__ == "__main__":
     main()
