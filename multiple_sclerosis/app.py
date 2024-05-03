@@ -9,7 +9,7 @@ from tensorflow import keras
 from tensorflow.keras.preprocessing import image
 
 # Модель 
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('model.h5', compile=True)
 
 # функция для принятия на вход dcm формат        
 def read_dcm(path):
@@ -40,7 +40,8 @@ img = lambda x: Image.fromarray(x.numpy().astype(np.uint8).reshape(512, 512))
 
 def main():
     st.title("Прогноз вероятности рассеянного склероза на снимке МРТ.")
-
+    st.write("Где 0 - нет склероза, 1 - есть склероз.")
+    
     # Display instruction text
     st.markdown("##### Инструкция:")
     st.write("1. Загрузите свое изображение, используя кнопку 'Upload an image'.")
