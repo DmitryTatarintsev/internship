@@ -1,7 +1,7 @@
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/Ural-logo.jpg" alt="Image 1" style="width: 33%; height: auto;">
-    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/alfa.png" alt="Image 2" style="width: 33%; height: auto;">
-    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/salfa.png" alt="Image 2" style="width: 33%; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/Ural-logo.jpg" alt="Image 1" style="width: 25%; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/alfa.png" alt="Image 2" style="width: 25%; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/salfa.png" alt="Image 2" style="width: 25%; height: auto;">
 </div>
 <br>
 
