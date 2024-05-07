@@ -1,4 +1,4 @@
-# Участвовал в реальных проектах
+**Участвовал в реальных проектах:**
 
 <div style="display: flex; justify-content: center;">
     <img src="https://github.com/DmitryTatarintsev/internship/blob/main/Ural-logo.jpg" alt="Image 1" style="width: 25%; height: auto;">
@@ -7,7 +7,7 @@
 </div>
 <br>
 
-## Примеры (2022 г. - YYYY)
+**Примеры (2022 г. - YYYY):**
 
 | #  | Наименование проекта (Cсылка на проект.)  | Описание  | Стек | Дедлайн, Статус |
 |:-|:-|:-|:-|:-|
@@ -18,8 +18,8 @@
 <br>
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/yap.png" alt="Image 1" style="width: 49%; height: auto;">
-    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/ni.png" alt="Image 2" style="width: 49%; height: auto;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/yap.png" alt="Image 1" style="width: 49%; height: 110px;">
+    <img src="https://github.com/DmitryTatarintsev/internship/blob/main/ni.png" alt="Image 2" style="width: 49%; height: 110px;">
 </div>
 
 | | | |
