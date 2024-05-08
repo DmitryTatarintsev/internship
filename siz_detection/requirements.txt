@@ -1,6 +1,8 @@
 pip==23.1.2
 streamlit==1.33.0
-opencv-4.8.0
+opencv-contrib-python==4.8.0.76
+opencv-python==4.8.0.76
+opencv-python-headless==4.9.0.80
 ultralytics==8.2.2 
 Pillow==9.4.0
 ffmpeg-python==0.2.0 
